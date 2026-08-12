@@ -1,0 +1,520 @@
+/* =========================
+   ROOT
+========================= */
+
+:root {
+  --background: #101112;
+  --background-light: #151617;
+
+  --text: #f2f2f2;
+  --text-secondary: #989b9f;
+  --text-muted: #606469;
+
+  --border: #282a2d;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 6rem 0;
+}
+
+.hero-content {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 4rem;
+}
+
+/* LOGO */
+
+.hero-logo {
+  width: 145px;
+  height: auto;
+
+  flex-shrink: 0;
+
+  margin-top: 42px;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+  max-width: 720px;
+}
+
+.eyebrow,
+.section-label {
+  margin-bottom: 1.4rem;
+
+  color: var(--text-muted);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 8vw, 7rem);
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+}
+
+.hero-role {
+  margin-top: 1.8rem;
+  margin-bottom: 0;
+
+  color: #d6d6d6;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.hero-role span {
+  margin: 0 8px;
+
+  color: var(--text-muted);
+}
+
+.hero-description {
+  max-width: 520px;
+
+  margin-top: 1.2rem;
+
+  color: var(--text-secondary);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO ACTIONS
+========================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-top: 2.5rem;
+}
+
+.primary-link,
+.secondary-link {
+  text-decoration: none;
+
+  font-size: 0.95rem;
+
+  transition: 0.2s ease;
+}
+
+.primary-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #ffffff;
+}
+
+.primary-link span {
+  transition: transform 0.2s ease;
+}
+
+.primary-link:hover {
+  color: white;
+}
+
+.primary-link:hover span {
+  transform: translateY(4px);
+}
+
+.secondary-link {
+  color: var(--text-secondary);
+}
+
+.secondary-link:hover {
+  color: white;
+}
+
+/* =========================
+   SHARED SECTION
+========================= */
+
+.about,
+.projects,
+.socials {
+  padding: 7rem 0;
+}
+
+.about,
+.socials {
+  background-color: var(--background-light);
+}
+
+.simple-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 3fr;
+
+  gap: 4rem;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-text {
+  max-width: 720px;
+}
+
+.about-text p {
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+
+  color: var(--text-secondary);
+
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+  line-height: 1.65;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.section-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 3rem;
+}
+
+.section-top .section-label {
+  margin: 0;
+}
+
+.section-count {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+}
+
+/* =========================
+   PROJECT LIST
+========================= */
+
+.project-list {
+  border-top: 1px solid var(--border);
+}
+
+.project-item {
+  display: grid;
+
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    100px
+    35px;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  padding: 2rem 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  transition:
+    padding-left 0.25s ease,
+    color 0.2s ease;
+}
+
+.project-item:hover {
+  padding-left: 10px;
+
+  color: #ffffff;
+}
+
+.project-number {
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+}
+
+.project-info h2 {
+  margin: 0;
+
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.project-info p {
+  margin-top: 7px;
+  margin-bottom: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+}
+
+.project-type {
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 1px;
+}
+
+.project-arrow {
+  color: var(--text-secondary);
+
+  font-size: 1.2rem;
+
+  text-align: right;
+
+  transition: transform 0.2s ease;
+}
+
+.project-item:hover .project-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   SOCIALS
+========================= */
+
+.social-list {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top: 1px solid var(--border);
+}
+
+.social-list a {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.3rem 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text-secondary);
+
+  text-decoration: none;
+
+  font-size: 1.05rem;
+
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.social-list a:hover {
+  padding-left: 7px;
+
+  color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 2.5rem 0;
+
+  border-top: 1px solid var(--border);
+
+  background-color: var(--background);
+}
+
+.footer-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--text-muted);
+
+  font-size: 0.8rem;
+}
+
+.footer-logo {
+  color: var(--text-secondary);
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .hero-content {
+    gap: 3rem;
+  }
+
+  .hero-logo {
+    width: 110px;
+  }
+
+  .simple-grid {
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+
+    padding: 5rem 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+
+    gap: 2.5rem;
+  }
+
+  .hero-logo {
+    width: 95px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.3rem, 15vw, 5rem);
+
+    letter-spacing: -3px;
+  }
+
+  .hero-role {
+    line-height: 1.8;
+  }
+
+  .about,
+  .projects,
+  .socials {
+    padding: 5rem 0;
+  }
+
+  .simple-grid {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .project-item {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr)
+      30px;
+
+    gap: 1rem;
+
+    padding: 1.6rem 0;
+  }
+
+  .project-type {
+    display: none;
+  }
+
+  .project-info p {
+    padding-right: 1rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .hero-actions {
+    gap: 1.4rem;
+  }
+
+  .hero-logo {
+    width: 80px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.6rem;
+  }
+}
